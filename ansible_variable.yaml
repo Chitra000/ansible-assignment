@@ -1,0 +1,10 @@
+---
+- name: ansible variables
+  hosts: all
+  become: true
+  vars:
+    my_var: "Hello World!"
+  tasks:
+    - name: Print global variable
+      debug:
+        var: my_var

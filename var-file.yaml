@@ -1,0 +1,18 @@
+---
+- name: file to open variable
+  hosts: all
+  become: true
+
+  vars_files:
+    - info.yaml
+  tasks:
+    - name: print first name
+      debug:
+        var: first_name
+    - name: print last name
+      debug:
+        var: last_name
+    - name: print loop items
+      debug:
+        var: "{{ item }}"
+      loop: "{{ depts }}"
