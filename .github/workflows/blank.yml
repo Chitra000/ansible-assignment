@@ -26,6 +26,7 @@ jobs:
           pip install ansible
         
       - name: Run Ansible Playbook
-        run: ansible-playbook -i inventory.ini install-nginx.yaml
+        run: ansible-playbook -i inventory.ini playbook.yml -u ubuntu --private-key=/home/runner/chitra-key-pair.pem
+
         env:
           ANSIBLE_HOST_KEY_CHECKING: false
