@@ -33,6 +33,6 @@ jobs:
 
     - name: Run Ansible playbook
       run: |
-        ansible-playbook -i inventory.ini --private-key=/home/runner/.ssh/id_rsa -u ubuntu -b uninstall-nginx.yaml
+        ansible-playbook -i inventory.ini --private-key=/home/runner/.ssh/id_rsa -u ubuntu -b install-nginx.yaml
       env:
         ANSIBLE_HOST_KEY_CHECKING: false
